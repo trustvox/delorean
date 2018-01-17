@@ -1,7 +1,8 @@
 # delorean
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+[![Build Status](https://travis-ci.org/trustvox/delorean.svg?branch=feature%2Finstall-ember-paper)](https://travis-ci.org/trustvox/delorean)
+
+Track your time, easily and free with this emberjs based tracker timer! 
 
 ## Prerequisites
 
