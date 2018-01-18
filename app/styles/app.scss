@@ -1,0 +1,6 @@
+// Setup ember view as full page
+body {
+  >.ember-view {
+    height: 100%;
+  }
+}
