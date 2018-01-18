@@ -4,8 +4,9 @@ module.exports = function (deployTarget) {
   if (deployTarget === 'production') {
     ENV.git = {
       repo: 'git@github.com:trustvox/delorean.git',
-      branch: 'deploys',
-      commitMessage: 'Deployed %@'
+      branch: 'gh-pages',
+      worktreePath: 'tmp/delorean-deploy',
+      commitMessage: 'Deployed %@',
     }
 
     ENV.pipeline = {
