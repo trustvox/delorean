@@ -15,7 +15,6 @@ cache:
 
 env:
   global:
-    # See https://git.io/vdao3 for details.
     - JOBS=1
 
 before_install:
@@ -24,3 +23,7 @@ before_install:
 script:
   - npm run lint:js
   - npm test
+
+branches:
+  only:
+    - master
