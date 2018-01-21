@@ -15,9 +15,11 @@
     "lint:js": "eslint ./*.js app config lib server tests",
     "start": "ember serve",
     "test": "ember test",
-    "deploy": "ember deploy production"
+    "deploy": "ember deploy production",
+    "deps:install": "bower install"
   },
   "devDependencies": {
+    "bower": "^1.8.2",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~2.18.0",
