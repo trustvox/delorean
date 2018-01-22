@@ -1973,7 +1973,7 @@ core-object@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/core-object/-/core-object-1.1.0.tgz#86d63918733cf9da1a5aae729e62c0a88e66ad0a"
 
-core-object@^2.0.0, core-object@^2.0.6:
+core-object@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/core-object/-/core-object-2.1.1.tgz#4b7a5f1edefcb1e6d0dcb58eab1b9f90bfc666a8"
   dependencies:
@@ -2133,6 +2133,10 @@ delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
 
+denodeify@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/denodeify/-/denodeify-1.2.1.tgz#3a36287f5034e699e7577901052c2e6c94251631"
+
 depd@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.1.tgz#5783b4e1c459f06fa5ca27f991f3d06e7a310359"
@@ -2284,7 +2288,7 @@ ember-cli-dependency-checker@^2.0.0:
     resolve "^1.5.0"
     semver "^5.3.0"
 
-ember-cli-deploy-build@^1.1.1:
+ember-cli-deploy-build@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ember-cli-deploy-build/-/ember-cli-deploy-build-1.1.1.tgz#de515b04536a569f42626ef28aea139f32ef00e8"
   dependencies:
@@ -2293,27 +2297,18 @@ ember-cli-deploy-build@^1.1.1:
     glob "^7.1.1"
     rsvp "^3.5.0"
 
-ember-cli-deploy-display-revisions@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-display-revisions/-/ember-cli-deploy-display-revisions-1.0.0.tgz#72ad8cf74d94e996ae0a52cd1403fd9195db38df"
+ember-cli-deploy-ghpages@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-ghpages/-/ember-cli-deploy-ghpages-0.2.0.tgz#a4ee7d57b686aa96d111a733e42d700529100a45"
   dependencies:
-    cli-table2 "^0.2.0"
-    core-object "^2.0.0"
-    ember-cli-deploy-plugin "^0.2.3"
-    moment "^2.18.0"
-    rsvp "^3.5.0"
-
-ember-cli-deploy-git@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-git/-/ember-cli-deploy-git-1.3.0.tgz#a9c73f6d969f93c95e3aa1b0685063994aeff93b"
-  dependencies:
+    denodeify "^1.2.1"
     ember-cli-babel "^5.1.5"
-    ember-cli-deploy-plugin "^0.2.0"
-    fs-extra "^4.0.0"
-    ncp "^2.0.0"
-    rsvp "^3.1.0"
+    ember-cli-deploy-plugin "^0.2.5"
+    fs-extra "^0.28.0"
+    gift "^0.7.0"
+    rsvp "^3.2.1"
 
-ember-cli-deploy-plugin@^0.2.0, ember-cli-deploy-plugin@^0.2.1, ember-cli-deploy-plugin@^0.2.3, ember-cli-deploy-plugin@^0.2.6:
+ember-cli-deploy-plugin@^0.2.1, ember-cli-deploy-plugin@^0.2.5:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/ember-cli-deploy-plugin/-/ember-cli-deploy-plugin-0.2.9.tgz#a3d395b8adad7ef68d8bacdd0b0f4a61bcf9e651"
   dependencies:
@@ -2324,18 +2319,6 @@ ember-cli-deploy-plugin@^0.2.0, ember-cli-deploy-plugin@^0.2.1, ember-cli-deploy
 ember-cli-deploy-progress@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/ember-cli-deploy-progress/-/ember-cli-deploy-progress-1.3.0.tgz#18663deed25b4d5397476332f25eed3c3fdf225a"
-
-ember-cli-deploy-revision-data@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-revision-data/-/ember-cli-deploy-revision-data-1.0.0.tgz#e870abc79f25bc96fe5532fec41baa9e1bc3ccc6"
-  dependencies:
-    chalk "^1.1.3"
-    core-object "^2.0.6"
-    ember-cli-deploy-plugin "^0.2.6"
-    git-repo-info "^1.3.0"
-    minimatch "^3.0.3"
-    rsvp "^3.5.0"
-    simple-git "^1.57.0"
 
 ember-cli-deploy@^1.0.2:
   version "1.0.2"
@@ -3395,6 +3378,16 @@ fs-extra@^0.26.0:
     path-is-absolute "^1.0.0"
     rimraf "^2.2.8"
 
+fs-extra@^0.28.0:
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-0.28.0.tgz#9a1c0708ea8c5169297ab06fd8cb914f5647b272"
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^2.1.0"
+    klaw "^1.0.0"
+    path-is-absolute "^1.0.0"
+    rimraf "^2.2.8"
+
 fs-extra@^0.30.0:
   version "0.30.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-0.30.0.tgz#f233ffcc08d4da7d432daa449776989db1df93f0"
@@ -3524,7 +3517,13 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-git-repo-info@^1.1.2, git-repo-info@^1.3.0, git-repo-info@^1.4.1:
+gift@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/gift/-/gift-0.7.0.tgz#6ff386e0af3211b941ab9e1aff5976adc92c2428"
+  dependencies:
+    underscore "1.x.x"
+
+git-repo-info@^1.1.2, git-repo-info@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/git-repo-info/-/git-repo-info-1.4.1.tgz#2a072823254aaf62fcf0766007d7b6651bd41943"
 
@@ -5022,7 +5021,7 @@ mimic-fn@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.1.0.tgz#e667783d92e89dbd342818b5230b9d62a672ad18"
 
-"minimatch@2 || 3", minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@^3.0.4, minimatch@~3.0.2:
+"minimatch@2 || 3", minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.4, minimatch@~3.0.2:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   dependencies:
@@ -5066,10 +5065,6 @@ mkdirp@^0.3.5:
 mktemp@~0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/mktemp/-/mktemp-0.4.0.tgz#6d0515611c8a8c84e484aa2000129b98e981ff0b"
-
-moment@^2.18.0:
-  version "2.20.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
 
 morgan@^1.8.1:
   version "1.9.0"
@@ -5132,10 +5127,6 @@ nanomatch@^1.2.5:
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
-
-ncp@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ncp/-/ncp-2.0.0.tgz#195a21d6c46e361d2fb1281ba38b91e9df7bdbb3"
 
 negotiator@0.6.1:
   version "0.6.1"
@@ -6250,12 +6241,6 @@ simple-fmt@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/simple-fmt/-/simple-fmt-0.1.0.tgz#191bf566a59e6530482cb25ab53b4a8dc85c3a6b"
 
-simple-git@^1.57.0:
-  version "1.85.0"
-  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-1.85.0.tgz#563ad291efc8a127735e8fbcd796967377614cd4"
-  dependencies:
-    debug "^3.1.0"
-
 simple-is@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/simple-is/-/simple-is-0.2.0.tgz#2abb75aade39deb5cc815ce10e6191164850baf0"
@@ -6888,7 +6873,7 @@ underscore.string@~3.3.4:
     sprintf-js "^1.0.3"
     util-deprecate "^1.0.2"
 
-underscore@>=1.8.3:
+underscore@1.x.x, underscore@>=1.8.3:
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
 
