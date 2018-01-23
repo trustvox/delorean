@@ -2,11 +2,11 @@ module.exports = function (deployTarget) {
   var ENV = {};
 
   if (deployTarget === 'production') {
-    ENV.git = {
-      repo: 'git@github.com:trustvox/delorean.git',
-      branch: 'gh-pages',
-      worktreePath: 'tmp/delorean-deploy',
-      commitMessage: 'Deployed %@',
+    ENV.ghpages = {
+      gitRemoteUrl: 'https://github.com/trustvox/delorean',
+      commitMessage: 'Proudly deployed by: ember-cli-deploy-ghpages',
+      gitRemoteName: 'origin',
+      gitBranch: 'gh-pages'
     }
 
     ENV.pipeline = {

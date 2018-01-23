@@ -1,7 +1,7 @@
 ---
 language: node_js
 node_js:
-  - "8"
+  - '8'
 
 sudo: false
 dist: trusty
@@ -11,11 +11,12 @@ addons:
 
 cache:
   directories:
-    - $HOME/.npm
+    - "$HOME/.npm"
 
 env:
   global:
-    - JOBS=1
+  - JOBS=1
+  - secure: U7FRfm72Bw5I2gPAuE2cxBMym+KpIy60FNo1WZmUBn/iWXRAwKPsY/I9BYz+pU8y44BSf5B6fOZFthvibjcUDuS9GIp6a76p4zqxkaOpFCVrSvYPizqJxoGqNXNhUrlbdp/d4x+p1hyULW7awLFQnGIH5IRUzwiZ8kcJPhuFGmeiuM+q8fmGL38DmNWEmv2RlIwMEaDSG8Ts3XqDe1lS1pqfjjPoduAwYm/P+23/T5nMRyznG/wSBaink8oSR61mejqhaORZ4j0vLV3Vp24yDhVMn8izhPfjERnQooNI/GVhigAmoborjuMp9mM/jGdlF4EmxMxFMkEC8ueEZ9N4M29O3AdMQrWJP/8/FzPNmz1w525oAZbLVKWSzioIlR0WFlCnjCiKRMHfSCRZOF1loKXmvyCFdxjvNapDJZeTkznstWd9qjTflwbd2zz/0yvai3cTybtwFyzNE4qGSWb8Zoth4APNkA8MzJxFZnYPIfddDBltGv/Dlo/HOwTXT6zetWWobtxDfQ+GEQIA20BtE4BFmOyHmcEjlrappPrnJ1rtZ4zcoe14zZFJnxV6QQ6mVnx0EDpyLm8n9yQyTQB582zFRcpGDcuNb/qSPhFFi+W3hlkrhkhhCZCBss44SNQ9KB5d/knNJq708x2gWPaZFpU1QXHvo8KZwzHWQ2iovkU=
 
 before_install:
   - npm config set spin false
@@ -24,9 +25,15 @@ script:
   - npm run lint:js
   - npm test
 
+before_deploy:
+  - git config --global user.email "brunoocasali@gmail.com"
+  - git config --global user.name "Travis-CI <brunoocasali>"
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+
 deploy:
   - provider: script
     skip_cleanup: true
     script: node_modules/.bin/ember deploy production --verbose
     on:
-      branch: master
+      all_branches: true
