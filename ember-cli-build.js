@@ -7,6 +7,8 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  let node = 'node_modules';
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
@@ -19,6 +21,10 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+
+  app.import(`${node}/bulma/css/bulma.min.css`);
+
+  app.import(`${node}/feather-icons/dist/feather.min.js`);
 
   return app.toTree();
 };
