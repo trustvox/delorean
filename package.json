@@ -41,12 +41,13 @@
     "ember-data": "~3.7.0",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^2.0.0",
+    "ember-local-storage": "^1.6.0",
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.7.3",
     "eslint-plugin-ember": "^6.2.0",
+    "feather-icons": "^4.17.0",
     "loader.js": "^4.7.0",
-    "sass": "^1.17.0",
-    "feather-icons": "^4.17.0"
+    "sass": "^1.17.0"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
