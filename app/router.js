@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function () {
   this.route('index', { path: '/' });
+  this.route('edit', { path: 'edit/:task_id' });
 });
 
 export default Router;

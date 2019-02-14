@@ -4,7 +4,7 @@
       {{log model}}
       <div class="control is-expanded">
         {{input type="text"
-                value=description
+                value=model.description
                 class="input is-warning big-input"
                 placeholder="Qual é o nome da sua tarefa?"}}
       </div>
@@ -16,7 +16,7 @@
         <div class="field">
           <div class="control">
             {{input type="text"
-                    value=initial
+                    value=model.initial
                     class="input is-warning big-input-time"
                     placeholder="13:00"}}
           </div>
@@ -24,7 +24,7 @@
         <div class="field">
           <div class="control">
             {{input type="text"
-                    value=ending
+                    value=model.ending
                     class="input is-warning big-input-time"
                     placeholder="18:00"}}
           </div>
