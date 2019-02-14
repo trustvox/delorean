@@ -3,7 +3,7 @@
     <tr>
       <th>Descrição</th>
       <th colspan="2" class="has-text-centered">manhã</th>
-      <th colspan="2" class="has-text-centered">tarde</th>
+      {{!-- <th colspan="2" class="has-text-centered">tarde</th> --}}
       <th class="has-text-right">total</th>
     </tr>
   </thead>
@@ -13,10 +13,10 @@
         <td>
           <a {{action 'edit' task}}>{{task.description}}</a>
         </td>
-        <td class="has-text-centered">{{get task.period 'morningStartAt'}}</td>
-        <td class="has-text-centered">{{get task.period 'morningEndAt'}}</td>
-        <td class="has-text-centered">{{get task.period 'afternoonStartAt'}}</td>
-        <td class="has-text-centered">{{get task.period 'afternoonEndAt'}}</td>
+        <td class="has-text-centered">{{task.initial}}</td>
+        <td class="has-text-centered">{{task.ending}}</td>
+        {{!-- <td class="has-text-centered">{{get task.period 'afternoonStartAt'}}</td> --}}
+        {{!-- <td class="has-text-centered">{{get task.period 'afternoonEndAt'}}</td> --}}
         <td class="has-text-right"><strong>{{task.dayPeriod}}</strong></td>
       </tr>
     {{/each}}
