@@ -1,7 +1,8 @@
 <div class="columns">
-  <div class="column is-11">
+  <div class="column is-8">
     <div class="field">
-      <div class="control">
+      {{log model}}
+      <div class="control is-expanded">
         {{input type="text"
                 value=description
                 class="input is-warning big-input"
@@ -9,9 +10,31 @@
       </div>
     </div>
   </div>
-  <div class="column">
-    <a class="button is-light" style="height: 80px; width: 100px">
-      <span class="icon is-large"><i data-feather="play"></i></span>
-    </a>
+  <div class="column is-4">
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            {{input type="text"
+                    value=initial
+                    class="input is-warning big-input-time"
+                    placeholder="13:00"}}
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            {{input type="text"
+                    value=ending
+                    class="input is-warning big-input-time"
+                    placeholder="18:00"}}
+          </div>
+        </div>
+        <div class="field">
+          <a {{action 'save'}} class="button is-light" style="height: 80px; width: 100px">
+            <span class="icon is-large"><i data-feather="play"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -8,13 +8,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Trabalhando em determinada tarefa muito importante com muita coisa para ser feita</td>
-      <td class="has-text-centered">9:39</td>
-      <td class="has-text-centered">12:01</td>
-      <td class="has-text-centered">13:05</td>
-      <td class="has-text-centered">18:33</td>
-      <td class="has-text-right"><strong>7:50</strong></td>
-    </tr>
+    {{#each tasks as |task|}}
+      <tr>
+        <td>
+          <a {{action 'edit' task}}>{{task.description}}</a>
+        </td>
+        <td class="has-text-centered">{{get task.period 'morningStartAt'}}</td>
+        <td class="has-text-centered">{{get task.period 'morningEndAt'}}</td>
+        <td class="has-text-centered">{{get task.period 'afternoonStartAt'}}</td>
+        <td class="has-text-centered">{{get task.period 'afternoonEndAt'}}</td>
+        <td class="has-text-right"><strong>{{task.dayPeriod}}</strong></td>
+      </tr>
+    {{/each}}
   </tbody>
 </table>
