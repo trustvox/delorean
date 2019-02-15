@@ -1,6 +1,6 @@
 import Component from '@ember/component';
-import { inject as service } from '@ember/service';
 import EmberObject from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default Component.extend({
   store: service(),
@@ -8,9 +8,12 @@ export default Component.extend({
 
   actions: {
     save() {
-      let properties = this.model.getProperties('description', 'initial', 'ending');
+      let properties =
+        this.model.getProperties('description', 'initial', 'ending');
 
-      this.get('store').createRecord('task', properties).save();
+      this.get('store').createRecord('task', properties).save().then(() => {
+        this.$(':input').val('');
+      });
     }
   }
 });
