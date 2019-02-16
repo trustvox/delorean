@@ -1,7 +1,6 @@
 <div class="columns">
   <div class="column is-8">
     <div class="field">
-      {{log model}}
       <div class="control is-expanded">
         {{input type="text"
                 value=model.description
@@ -30,7 +29,7 @@
           </div>
         </div>
         <div class="field">
-          <a {{action 'save'}} class="button is-light" style="height: 80px; width: 100px">
+          <a {{action actionName}} class="button is-light" style="height: 80px; width: 100px">
             <span class="icon is-large"><i data-feather="play"></i></span>
           </a>
         </div>

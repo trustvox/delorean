@@ -19,6 +19,12 @@
         {{!-- <td class="has-text-centered">{{get task.period 'afternoonEndAt'}}</td> --}}
         <td class="has-text-right"><strong>{{task.dayPeriod}}</strong></td>
       </tr>
+    {{else}}
+      <tr>
+        <td colspan="4" class="has-text-centered">
+          <em>Ops... Você ainda não criou nenhuma tarefa, por isso essa lista está vazia!</em>
+        </td>
+      </tr>
     {{/each}}
   </tbody>
 </table>

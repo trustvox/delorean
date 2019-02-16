@@ -4,10 +4,17 @@ import { inject as service } from '@ember/service';
 
 export default Component.extend({
   store: service(),
+  actionName: 'create',
   model: EmberObject.create(),
 
   actions: {
-    save() {
+    update() {
+      this.model.save().then(() => {
+        this.$(':input').val('');
+      });
+    },
+
+    create() {
       let properties =
         this.model.getProperties('description', 'initial', 'ending');
 
