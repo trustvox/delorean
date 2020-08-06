@@ -1,26 +1,32 @@
-import Component from '@ember/component';
-import EmberObject from '@ember/object';
-import { inject as service } from '@ember/service';
+import Component from "@ember/component";
+import EmberObject from "@ember/object";
+import { inject as service } from "@ember/service";
 
 export default Component.extend({
   store: service(),
-  actionName: 'create',
+  actionName: "create",
   model: EmberObject.create(),
 
   actions: {
     update() {
       this.model.save().then(() => {
-        this.$(':input').val('');
+        document.querySelectorAll("input").forEach((el) => (el.value = ""));
       });
     },
 
     create() {
-      let properties =
-        this.model.getProperties('description', 'initial', 'ending');
+      let properties = this.model.getProperties(
+        "description",
+        "initial",
+        "ending"
+      );
 
-      this.get('store').createRecord('task', properties).save().then(() => {
-        this.$(':input').val('');
-      });
-    }
-  }
+      this.store
+        .createRecord("task", properties)
+        .save()
+        .then(() => {
+          document.querySelectorAll("input").forEach((el) => (el.value = ""));
+        });
+    },
+  },
 });
