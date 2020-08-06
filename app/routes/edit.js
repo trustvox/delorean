@@ -1,11 +1,10 @@
-import Route from '@ember/routing/route';
+import Route from "@ember/routing/route";
 
-export default Route.extend({
+export default class EditRoute extends Route {
   setupController(controller, model) {
-    this._super(controller, model);
+    // super.setupController(controller, model);
 
-    this.controllerFor('application')
-      .set('loadedTask', model)
-    this.controllerFor('application').set('taskAction', 'update');
+    this.controllerFor("application").set("loadedTask", model);
+    this.controllerFor("application").set("taskAction", "update");
   }
-});
+}
