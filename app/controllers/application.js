@@ -1,7 +1,7 @@
-import Controller from '@ember/controller';
-import EmberObject from '@ember/object';
+import Controller from "@ember/controller";
+import EmberObject from "@ember/object";
 
-export default Controller.extend({
-  loadedTask: EmberObject.create(),
-  taskAction: 'create'
-});
+export default class ApplicationController extends Controller {
+  loadedTask = EmberObject.create();
+  taskAction = "create";
+}

@@ -1,7 +1,7 @@
-import Route from '@ember/routing/route';
+import Route from "@ember/routing/route";
 
-export default Route.extend({
+export default class ApplicationRoute extends Route {
   model() {
-    return this.store.findAll('task');
-  },
-});
+    return this.store.findAll("task");
+  }
+}

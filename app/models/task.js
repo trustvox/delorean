@@ -1,9 +1,9 @@
-import { Model, attr } from "@ember-data/model";
+import Model, { attr } from "@ember-data/model";
 
-export default Model.extend({
-  description: attr("string"),
-  initial: attr("string"),
-  ending: attr("string"),
+export default class TaskModel extends Model {
+  @attr("string") description;
+  @attr("string") initial;
+  @attr("string") ending;
 
   // trackings: hasMany('tracking', { async: true, dependent: 'destroy' })
-});
+}
