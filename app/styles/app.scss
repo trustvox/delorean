@@ -1,8 +1,6 @@
 // Setup ember view as full page
 body {
-  >.ember-view {
-    height: 100%;
-  }
+  height: 100%;
 }
 
 .big-input {
