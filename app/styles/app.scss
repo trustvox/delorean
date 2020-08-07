@@ -1,3 +1,16 @@
+@charset "utf-8";
+
+@import "node_modules/bulma/sass/utilities/initial-variables";
+
+@import "node_modules/bulma/sass/utilities/_all";
+@import "node_modules/bulma/sass/base/_all";
+@import "node_modules/bulma/sass/elements/_all";
+@import "node_modules/bulma/sass/form/_all";
+@import "node_modules/bulma/sass/components/_all";
+@import "node_modules/bulma/sass/grid/_all";
+@import "node_modules/bulma/sass/helpers/_all";
+@import "node_modules/bulma/sass/layout/_all";
+
 // Setup ember view as full page
 body {
   height: 100%;
@@ -15,4 +28,13 @@ body {
   height: 80px;
   font-weight: 600;
   font-size: 39px;
+}
+
+.centerall {
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }

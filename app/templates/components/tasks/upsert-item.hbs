@@ -2,10 +2,12 @@
   <div class="column is-8">
     <div class="field">
       <div class="control is-expanded">
-        {{input type="text"
-                value=model.description
-                class="input is-warning big-input"
-                placeholder="Qual é o nome da sua tarefa?"}}
+        <Input
+          type="text"
+          class="input is-warning big-input"
+          placeholder="Qual é o nome da sua tarefa?"
+          @value={{@model.description}}
+        />
       </div>
     </div>
   </div>
@@ -14,24 +16,32 @@
       <div class="field-body">
         <div class="field">
           <div class="control">
-            {{input type="text"
-                    value=model.initial
-                    class="input is-warning big-input-time"
-                    placeholder="13:00"}}
+            <Input
+              type="text"
+              class="input is-warning big-input-time"
+              placeholder="13:00"
+              @value={{@model.initial}}
+            />
           </div>
         </div>
         <div class="field">
           <div class="control">
-            {{input type="text"
-                    value=model.ending
-                    class="input is-warning big-input-time"
-                    placeholder="18:00"}}
+            <Input
+              type="text"
+              class="input is-warning big-input-time"
+              placeholder="18:00"
+              @value={{@model.ending}}
+            />
           </div>
         </div>
         <div class="field">
-          <a {{action actionName}} class="button is-light" style="height: 80px; width: 100px">
+          <button
+            class="button is-light"
+            style="height: 80px; width: 100px"
+            {{on "click" (action this.save)}}
+          >
             <span class="icon is-large"><i data-feather="play"></i></span>
-          </a>
+          </button>
         </div>
       </div>
     </div>

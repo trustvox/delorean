@@ -1,4 +1,4 @@
-<table class="table is-fullwidth">
+<table class="table is-fullwidth is-hoverable">
   <thead>
     <tr>
       <th>Descrição</th>
@@ -8,10 +8,13 @@
     </tr>
   </thead>
   <tbody>
-    {{#each tasks as |task|}}
+    {{#each (filter-by "isNew" false @tasks) as |task|}}
+      {{log task}}
       <tr>
         <td>
-          <a {{action 'edit' task}}>{{task.description}}</a>
+          <LinkTo @route="tasks.edit" @model={{task.id}}>
+            {{task.description}}
+          </LinkTo>
         </td>
         <td class="has-text-centered">{{task.initial}}</td>
         <td class="has-text-centered">{{task.ending}}</td>
