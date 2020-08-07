@@ -9,7 +9,6 @@
   </thead>
   <tbody>
     {{#each (filter-by "isNew" false @tasks) as |task|}}
-      {{log task}}
       <tr>
         <td>
           <LinkTo @route="tasks.edit" @model={{task.id}}>
