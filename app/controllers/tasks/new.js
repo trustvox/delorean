@@ -1,8 +1,8 @@
 import Controller from "@ember/controller";
 import { action } from "@ember/object";
 
-export default class TasksEditController extends Controller {
+export default class TasksNewController extends Controller {
   @action onSaveHandler() {
-    this.transitionToRoute("tasks.new");
+    this.transitionToRoute("tasks");
   }
 }

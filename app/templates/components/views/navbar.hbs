@@ -7,7 +7,12 @@
 
   <div class="navbar-end">
     <div class="navbar-item">
-      <span class="icon is-big"><i data-feather="smile"></i></span>
+      <span
+        class="icon is-big"
+        {{on "click" (action this.clearAll)}}
+      >
+        <i data-feather="database"></i>
+      </span>
     </div>
   </div>
 </nav>
