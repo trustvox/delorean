@@ -1,5 +1,5 @@
-import EmberRouter from '@ember/routing/router';
-import config from 'delorean/config/environment';
+import EmberRouter from "@ember/routing/router";
+import config from "delorean/config/environment";
 
 export default class Router extends EmberRouter {
   location = config.locationType;
@@ -7,6 +7,8 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('index', { path: '/' });
-  this.route('edit', { path: 'edit/:task_id' });
+  this.route("tasks", { path: "/" }, function () {
+    this.route("new", { path: "/" });
+    this.route("edit", { path: "edit/:id" });
+  });
 });

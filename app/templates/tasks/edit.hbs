@@ -1,7 +1,7 @@
 <section class="hero is-medium is-warning is-bold">
   <div class="hero-body">
     <div class="container">
-      {{tasks/upsert-item model=loadedTask actionName=taskAction}}
+      <Tasks::UpsertItem @model={{@model}} @onSaveHandler={{this.onSaveHandler}}/>
     </div>
   </div>
 </section>

@@ -1,13 +1,17 @@
-'use strict';
+"use strict";
 
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require("ember-cli/lib/broccoli/ember-app");
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
-  });
+    sassOptions: {
+      includePaths: ["node_modules/bulma"],
+    },
 
-  let node = 'node_modules';
+    "ember-composable-helpers": {
+      only: ["filter-by"],
+    },
+  });
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
@@ -22,9 +26,7 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  app.import(`${node}/bulma/css/bulma.min.css`);
-
-  app.import(`${node}/feather-icons/dist/feather.min.js`);
+  app.import(`node_modules/feather-icons/dist/feather.min.js`);
 
   return app.toTree();
 };

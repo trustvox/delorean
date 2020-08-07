@@ -2,8 +2,12 @@
 
 {{outlet}}
 
-<Views::MainAction />
-<Views::TasksSection />
+<section class="section">
+  <div class="container">
+    <Tasks::ListItems @tasks={{@model}} />
+  </div>
+</section>
+
 <Views::Footer />
 
 <script>
