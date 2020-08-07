@@ -1,4 +1,6 @@
 <section class="hero is-medium is-warning is-bold">
+  <Views::Navbar />
+
   <div class="hero-body">
     <div class="container">
       <Tasks::UpsertItem @model={{@model}} @onSaveHandler={{this.onSaveHandler}}/>

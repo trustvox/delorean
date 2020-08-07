@@ -1,14 +1,16 @@
-<nav class="navbar is-black is-spaced" role="navigation" aria-label="dropdown navigation">
+<nav class="navbar is-black is-spaced" role="navigation" aria-label="dropdown navigation" {{render-feather-icons}}>
   <div class="navbar-brand">
     <div class="navbar-item">
-      <span class="icon is-big"><i data-feather="award"></i></span>
+      <span class="icon is-big has-text-black">
+        <i data-feather="award"></i>
+      </span>
     </div>
   </div>
 
   <div class="navbar-end">
     <div class="navbar-item">
       <span
-        class="icon is-big"
+        class="icon is-big has-text-black"
         {{on "click" (action this.clearAll)}}
       >
         <i data-feather="database"></i>
